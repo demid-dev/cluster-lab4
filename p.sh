@@ -11,6 +11,9 @@ cd $PBS_O_WORKDIR
 ml icc
 ml openmpi
 
+rm -r output
+mkdir output
+
 mpirun -np 1 prod >output/res-1
 mpirun -np 2 prod >output/res-2
 mpirun -np 3 prod >output/res-3
